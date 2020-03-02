@@ -38,7 +38,7 @@ text-align: center;
     <input id="email" name="email" type="email" required placeholder="email address">
             </p>
 <p>
-<label id="number-label" for="number">A random number from 0 to a 9,999,999,999:</label>
+<label id="number-label" for="number">Please choose a satisfactory number of deaths caused by the outbreak (0-9999999999):</label>
     <input id="number" name="phone-number" type="number" min="0" max="9999999999" placeholder="random number">
             </p>
 <p>
@@ -49,7 +49,7 @@ text-align: center;
         <option value="virus">virus</option>
     </select>
 </p>
-<p>Filling:</p>
+<p>Select your filling:</p>
 <div id="radio-buttons">
     <p>
 <label for="human">
@@ -67,9 +67,44 @@ text-align: center;
 </label>
     </p>
 </div>
+<p>Please select appropriate feelings about the outbreak</p>
+<div id="checkboxes">
+    <p>
+<label for="happy">
+    <input id="happy" value="virus" type="checkbox" name="feelings">Happy
+</label>
+    </p>
+    <p>
+<label for="remorseful">
+    <input id="remorseful" value="virus" type="checkbox" name="feelings">Remorseful
+</label>
+    </p>
+    <p>
+<label for="worried">
+    <input id="worried" value="human" type="checkbox" name="feelings">Worried
+</label>
+    </p>
+    <p>
+<label for="uncertain">
+    <input id="uncertain" value="human" type="checkbox" name="feelings">Uncertain
+</label>
+    </p>
+    <p>
+<label for="hot-and-steamy">
+    <input id="hot-and-steamy" value="pasty" type="checkbox" name="feelings">Hot and steamy
+</label>
+    </p>
+</div>
+
+<div id="comments">
+    <label for="comments">
+        <textarea name="comments" rows="20" cols="50">please enter any additional comments</textarea>
+    </label>
+</div>
+
 <div id="submit-button">
 <p>
-    <button type="submit">Submit</button>
+    <button id="submit" type="submit">Submit</button>
 </p>
 </div>
     </form>
