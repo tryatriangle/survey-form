@@ -39,7 +39,7 @@ text-align: center;
             </p>
 <p>
 <label id="number-label" for="number">A random number from 0 to a 9,999,999,999:</label>
-    <input id="number" name="phone-number" type="number" min="0" max="10" placeholder="random number">
+    <input id="number" name="phone-number" type="number" min="0" max="9999999999" placeholder="random number">
             </p>
 <p>
 <label id="dropdown-label" for="dropdown">Type of being:</label>
@@ -49,9 +49,29 @@ text-align: center;
         <option value="virus">virus</option>
     </select>
 </p>
+<p>Filling:</p>
+<div id="radio-buttons">
+    <p>
+<label for="human">
+    <input id="human" value="human" type="radio" name="type-of-filling">Meat and bones
+</label>
+    </p>
+    <p>
+<label for="pasty">
+    <input id="pasty" value="pasty" type="radio" name="type-of-filling">Meat and vegetables
+</label>
+    </p>
+    <p>
+<label for="virus">
+    <input id="virus" value="virus" type="radio" name="type-of-filling">Folded proteins
+</label>
+    </p>
+</div>
+<div id="submit-button">
 <p>
     <button type="submit">Submit</button>
 </p>
+</div>
     </form>
 </div>
 
