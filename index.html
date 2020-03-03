@@ -12,11 +12,21 @@
     box-sizing:border-box;
 }
 
+.container {
+    display: table;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+}
+
 .column {
     background-color: #ECEBF3;
     border-radius: 25px;
     padding: 20px;
     float: left;
+    display: table-cell;
 }
 
 .form {
@@ -27,56 +37,51 @@
     width:20%
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 @media screen and (max-width:600px) {
     .column {
         width: 100%;
     }
 }
 
-#title {
-
-text-decoration: underline;
-text-align: center;
+.title {
+    text-decoration: underline;
+    text-align: center;
 }
 
-#header {
+.header {
     background-color: #C7D6D5;
     border-radius: 25px;
     padding: 20px;
 }
 
-#img {
+.img {
   max-width: 100%;
   height: auto;
 }
 
 .comments {
     width: 100%;
-    min-height: 75px;
+    
 }
 
 </style>
 
     </head>
 
-<body>
-    <div id="header">
-<h1 id="title">A quick form project</h1>
+<body style="background-color: #F9F9FB;">
+    <div class="header">
+<h1 class="title">A quick form project</h1>
     </div>
 
 <div id="intro">
     <p id="description">
-        We will be conducting a short survey on your thoughts and feelings surrounding pasties and their connection to the corona virus.
+        We will be conducting a short survey on your thoughts and feelings surrounding pasties and their connection to the corona virus. With the results of the survey will we be conducting studies into the percentage of the population that are either human, pasty or virus.
     </p>
 </div>
 
-<div class="row">
+<div class="container">
+
+    <div class="row">
 
     <div class="column form">
 
@@ -129,8 +134,8 @@ text-align: center;
     </label>
     </p>
     <p>
-    <label for="remorseful">
-    <input id="remorseful" value="virus" type="checkbox" name="feelings">Remorseful
+    <label for="excited">
+    <input id="excited" value="virus" type="checkbox" name="feelings">Excited
     </label>
     </p>
     <p>
@@ -145,7 +150,7 @@ text-align: center;
     </p>
     <p>
     <label for="hot-and-steamy">
-    <input id="hot-and-steamy" value="pasty" type="checkbox" name="feelings">Hot and steamy
+    <input id="hot-and-steamy" value="pasty" type="checkbox" name="feelings">Hot and steamy with chips on the side
     </label>
     </p>
     </div>
@@ -163,15 +168,16 @@ text-align: center;
 </p>
     </div>
     </form>
+    
 </div>
 
 <div class="column right-bar">
-    <img id="img" src="images/pasty.jpg">
+    <img class="img" src="images/pasty.jpg">
     <p>
-        <img id="img" src="images/human.jpg">
+        <img class="img" src="images/human.jpg">
     </p>
     <p>
-        <img id="img" src="images/virus.jpg">
+        <img class="img" src="images/virus.jpg">
     </p>
 </div>
 
