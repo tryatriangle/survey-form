@@ -12,6 +12,21 @@
     box-sizing:border-box;
 }
 
+.column {
+    background-color: #ECEBF3;
+    border-radius: 25px;
+    padding: 20px;
+    float: left;
+}
+
+.form {
+    width:80%;
+}
+
+.right-bar {
+    width:20%
+}
+
 .row:after {
     content: "";
     display: table;
@@ -19,9 +34,9 @@
 }
 
 @media screen and (max-width:600px) {
-    .column [
+    .column {
         width: 100%;
-    ]
+    }
 }
 
 #title {
@@ -36,21 +51,6 @@ text-align: center;
     padding: 20px;
 }
 
-.right-side-bar {
-    background-color: #C7D6D5;
-    border-radius: 25px;
-    padding: 20px;
-    float: right;
-    width: 20%;
-}
-
-#form {
-    background-color: #ECEBF3;
-    border-radius: 25px;
-    padding: 20px;
-    float: left;
-    width: 80%;
-}
 #img {
   max-width: 100%;
   height: auto;
@@ -66,9 +66,10 @@ text-align: center;
     </head>
 
 <body>
-<div id="header">
+    <div id="header">
 <h1 id="title">A quick form project</h1>
-</div>
+    </div>
+
 <div id="intro">
     <p id="description">
         We will be conducting a short survey on your thoughts and feelings surrounding pasties and their connection to the corona virus.
@@ -77,22 +78,22 @@ text-align: center;
 
 <div class="row">
 
-<div id="form">
+    <div class="column form">
 
     <form id="survey-form">
 <label id="name-label" for="name">Your name:</label>
-    <input id="name" name ="name" type="text" required placeholder="full name">
+    <input id="name" name="name" type="text" required placeholder="full name">
             
 <p>
-<label id="email-label" for="email">Your email address:</label>
+    <label id="email-label" for="email">Your email address:</label>
     <input id="email" name="email" type="email" required placeholder="email address">
             </p>
 <p>
-<label id="number-label" for="number">Please choose a satisfactory number of deaths caused by the outbreak (0-9999999999):</label>
+    <label id="number-label" for="number">Please choose a satisfactory number of deaths caused by the outbreak (0-9999999999):</label>
     <input id="number" name="phone-number" type="number" min="0" max="9999999999" placeholder="random number">
             </p>
 <p>
-<label id="dropdown-label" for="dropdown">Type of being:</label>
+    <label id="dropdown-label" for="dropdown">Type of being:</label>
     <select id="dropdown" name="dropdown">
         <option value="pasty">pasty</option>
         <option value="human">human</option>
@@ -100,67 +101,71 @@ text-align: center;
     </select>
 </p>
 <p>Select your filling:</p>
-<div id="radio-buttons">
-    <p>
-<label for="human">
-    <input id="human" value="human" type="radio" name="type-of-filling">Meat and bones
-</label>
-    </p>
-    <p>
-<label for="pasty">
-    <input id="pasty" value="pasty" type="radio" name="type-of-filling">Meat and vegetables
-</label>
-    </p>
-    <p>
-<label for="virus">
-    <input id="virus" value="virus" type="radio" name="type-of-filling">Folded proteins
-</label>
-    </p>
-</div>
-<p>Please select appropriate feelings about the outbreak</p>
-<div id="checkboxes">
-    <p>
-<label for="happy">
-    <input id="happy" value="virus" type="checkbox" name="feelings">Happy
-</label>
-    </p>
-    <p>
-<label for="remorseful">
-    <input id="remorseful" value="virus" type="checkbox" name="feelings">Remorseful
-</label>
-    </p>
-    <p>
-<label for="worried">
-    <input id="worried" value="human" type="checkbox" name="feelings">Worried
-</label>
-    </p>
-    <p>
-<label for="uncertain">
-    <input id="uncertain" value="human" type="checkbox" name="feelings">Uncertain
-</label>
-    </p>
-    <p>
-<label for="hot-and-steamy">
-    <input id="hot-and-steamy" value="pasty" type="checkbox" name="feelings">Hot and steamy
-</label>
-    </p>
-</div>
 
-<div id="comment-box">
+    <div id="radio-buttons">
+    <p>
+    <label for="human">
+    <input id="human" value="human" type="radio" name="type-of-filling">Meat and bones
+    </label>
+    </p>
+    <p>
+    <label for="pasty">
+    <input id="pasty" value="pasty" type="radio" name="type-of-filling">Meat and vegetables
+    </label>
+    </p>
+    <p>
+    <label for="virus">
+    <input id="virus" value="virus" type="radio" name="type-of-filling">Folded proteins
+    </label>
+    </p>
+    </div>
+
+<p>Please select appropriate feelings about the outbreak</p>
+
+    <div id="checkboxes">
+    <p>
+    <label for="happy">
+    <input id="happy" value="virus" type="checkbox" name="feelings">Happy
+    </label>
+    </p>
+    <p>
+    <label for="remorseful">
+    <input id="remorseful" value="virus" type="checkbox" name="feelings">Remorseful
+    </label>
+    </p>
+    <p>
+    <label for="worried">
+    <input id="worried" value="human" type="checkbox" name="feelings">Worried
+    </label>
+    </p>
+    <p>
+    <label for="uncertain">
+    <input id="uncertain" value="human" type="checkbox" name="feelings">Uncertain
+    </label>
+    </p>
+    <p>
+    <label for="hot-and-steamy">
+    <input id="hot-and-steamy" value="pasty" type="checkbox" name="feelings">Hot and steamy
+    </label>
+    </p>
+    </div>
+
+    <div id="comment-box">
+
     <label for="comments">
         <textarea class="comments" name="comments" >please enter any additional comments</textarea>
     </label>
-</div>
+    </div>
 
-<div id="submit-button">
+    <div id="submit-button">
 <p>
     <button id="submit" type="submit">Submit</button>
 </p>
-</div>
+    </div>
     </form>
 </div>
 
-<div class="right-side-bar">
+<div class="column right-bar">
     <img id="img" src="images/pasty.jpg">
     <p>
         <img id="img" src="images/human.jpg">
