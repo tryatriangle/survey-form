@@ -5,4 +5,4 @@ Made as part of the Odin Project's Web Development 101 course: https://www.theod
 
 Following the free code camp lessons for Responsive Web Design Certification- https://www.freecodecamp.org/learn
 
-Couldn't get the columns to responsivly stack on top of each other, but everything re-sizes so it can be used on any screen.
+The page passes all the user stories, but I couldn't get the columns to responsivly stack on top of each other. However everything re-sizes so it can be used on any screen.
